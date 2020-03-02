@@ -1,0 +1,22 @@
+<%= form_with(model: remove_marque_form_voiture, local: true) do |form| %>
+  <% if remove_marque_form_voiture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(remove_marque_form_voiture.errors.count, "error") %> prohibited this remove_marque_form_voiture from being saved:</h2>
+
+      <ul>
+        <% remove_marque_form_voiture.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :marque %>
+    <%= form.text_field :marque %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

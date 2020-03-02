@@ -1,0 +1,1 @@
+json.partial! "remove_marque_form_voitures/remove_marque_form_voiture", remove_marque_form_voiture: @remove_marque_form_voiture

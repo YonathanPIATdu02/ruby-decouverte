@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Noms:</strong>
+  <%= @personne.noms %>
+</p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @personne.prenom %>
+</p>
+
+<p>
+  <strong>Date naissance:</strong>
+  <%= @personne.date_naissance %>
+</p>
+<p>
+  <strong>Voitures:</strong>
+  <ul>
+  <% @personne.voitures.each do |voiture| %>
+    <li><%= render partial: "voitures/partialvoiture", locals: {voiture: voiture} %></li>
+    <% end %> 
+  </ul>
+</p>
+
+
+<%= link_to 'Edit', edit_personne_path(@personne) %> |
+<%= link_to 'Back', personnes_path %>

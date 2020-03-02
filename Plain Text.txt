@@ -1,0 +1,5 @@
+les commande a executé
+
+curl -sSL https://get.rvm.io | bash -s stable
+
+curl -o- -L https://yarnpkg.com/install.sh | bash

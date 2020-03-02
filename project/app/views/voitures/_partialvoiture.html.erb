@@ -1,0 +1,24 @@
+<p>
+  <strong>Immatriculation:</strong>
+  <%= voiture.immatriculation %>
+</p>
+
+<p>
+  <strong>Couleur:</strong>
+  <%= voiture.couleur %>
+</p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= link_to voiture.try(:marque).try(:libelle), marque_path(voiture.marque_id) if voiture.marque %>
+</p>
+
+<p>
+  <strong>Modele:</strong>
+  <%= voiture.modele %>
+</p>
+
+<p>
+  <strong>Date mise en service:</strong>
+  <%= voiture.date_mise_en_service %>
+</p>

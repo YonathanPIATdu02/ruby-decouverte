@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= render partial: "partialvoiture", locals: {voiture: @voiture} %>
+
+<p>
+  <strong>Personne:</strong>
+  <%= link_to @voiture.personne.try(:noms), personne_path(@voiture.personne_id) if @voiture.personne%>
+</p>
+
+<%= link_to 'Edit', edit_voiture_path(@voiture) %> |
+<%= link_to 'Back', voitures_path %>

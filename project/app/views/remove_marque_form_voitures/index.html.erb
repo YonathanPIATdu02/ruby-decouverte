@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Remove Marque Form Voitures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @remove_marque_form_voitures.each do |remove_marque_form_voiture| %>
+      <tr>
+        <td><%= remove_marque_form_voiture.marque %></td>
+        <td><%= link_to 'Show', remove_marque_form_voiture %></td>
+        <td><%= link_to 'Edit', edit_remove_marque_form_voiture_path(remove_marque_form_voiture) %></td>
+        <td><%= link_to 'Destroy', remove_marque_form_voiture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Remove Marque Form Voiture', new_remove_marque_form_voiture_path %>
