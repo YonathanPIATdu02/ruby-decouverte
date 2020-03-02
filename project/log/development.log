@@ -11220,3 +11220,1014 @@ ActionController::MissingExactTemplate (VoituresController#imat is missing a tem
 /home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:472:in `process_client'
 /home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:328:in `block in run'
 /home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-03-02 17:39:49 +0100
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 58.5ms | Allocations: 467)
+Completed 200 OK in 105ms (Views: 75.1ms | ActiveRecord: 0.0ms | Allocations: 2612)
+
+
+Started GET "/voitures" for 127.0.0.1 at 2020-03-02 17:39:57 +0100
+Processing by VoituresController#index as HTML
+  Rendering voitures/index.html.erb within layouts/application
+  [1m[36mVoiture Load (10.9ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures"[0m
+  ↳ app/views/voitures/index.html.erb:19
+  [1m[36mMarque Load (7.5ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (7.5ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (6.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.1ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (5.8ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.5ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.3ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (6.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.5ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.7ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.2ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.9ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.8ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.8ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.3ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.3ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  Rendered voitures/index.html.erb within layouts/application (Duration: 791.1ms | Allocations: 111537)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 985ms (Views: 754.7ms | ActiveRecord: 211.4ms | Allocations: 122744)
+
+
+Started GET "/marques/2" for 127.0.0.1 at 2020-03-02 17:40:03 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.4ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 2]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 73.5ms | Allocations: 3629)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 189ms (Views: 110.5ms | ActiveRecord: 10.8ms | Allocations: 9607)
+
+
+Started GET "/voitures/6" for 127.0.0.1 at 2020-03-02 17:40:04 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoiture Load (34.7ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 9.4ms | Allocations: 922)
+  [1m[36mPersonne Load (5.7ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/show.html.erb:7
+  Rendered voitures/show.html.erb within layouts/application (Duration: 19.9ms | Allocations: 2054)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 45.8ms | ActiveRecord: 45.8ms | Allocations: 7228)
+
+
+Started GET "/marques/2" for 127.0.0.1 at 2020-03-02 17:40:06 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarque Load (5.7ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.6ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 2]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 37.6ms | ActiveRecord: 11.4ms | Allocations: 6102)
+
+
+Started GET "/voitures/4" for 127.0.0.1 at 2020-03-02 17:40:07 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVoiture Load (5.2ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (5.2ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.8ms | Allocations: 718)
+  [1m[36mPersonne Load (5.3ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/show.html.erb:7
+  Rendered voitures/show.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 48.8ms | ActiveRecord: 15.7ms | Allocations: 6410)
+
+
+Started GET "/personnes/1" for 127.0.0.1 at 2020-03-02 17:40:09 +0100
+Processing by PersonnesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersonne Load (5.5ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personnes_controller.rb:67:in `set_personne'
+  Rendering personnes/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.5ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."personne_id" = ?[0m  [["personne_id", 1]]
+  ↳ app/views/personnes/show.html.erb:20
+  [1m[36mMarque Load (5.3ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.0ms | Allocations: 727)
+  Rendered personnes/show.html.erb within layouts/application (Duration: 16.9ms | Allocations: 2568)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 43.0ms | ActiveRecord: 16.2ms | Allocations: 8113)
+
+
+Started GET "/marques/2" for 127.0.0.1 at 2020-03-02 17:40:10 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarque Load (5.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.5ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 2]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 39.2ms | ActiveRecord: 11.1ms | Allocations: 6108)
+
+
+Started GET "/voitures/6" for 127.0.0.1 at 2020-03-02 17:40:12 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoiture Load (5.5ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (35.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 37.9ms | Allocations: 723)
+  [1m[36mPersonne Load (6.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/show.html.erb:7
+  Rendered voitures/show.html.erb within layouts/application (Duration: 46.9ms | Allocations: 1531)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 41.1ms | ActiveRecord: 46.5ms | Allocations: 6418)
+
+
+Started GET "/personnes/4" for 127.0.0.1 at 2020-03-02 17:40:13 +0100
+Processing by PersonnesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPersonne Load (34.1ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/personnes_controller.rb:67:in `set_personne'
+  Rendering personnes/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.9ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."personne_id" = ?[0m  [["personne_id", 4]]
+  ↳ app/views/personnes/show.html.erb:20
+  [1m[36mMarque Load (5.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 7.9ms | Allocations: 721)
+  [1m[36mMarque Load (4.9ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 7.9ms | Allocations: 713)
+  Rendered personnes/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 2333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 45.1ms | ActiveRecord: 49.9ms | Allocations: 7218)
+
+
+Started GET "/marques/2" for 127.0.0.1 at 2020-03-02 17:40:14 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarque Load (5.5ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.3ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 2]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 54ms (Views: 39.6ms | ActiveRecord: 10.8ms | Allocations: 6093)
+
+
+Started GET "/voitures/4" for 127.0.0.1 at 2020-03-02 17:40:15 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mVoiture Load (5.6ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.7ms | Allocations: 718)
+  [1m[36mPersonne Load (5.8ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/show.html.erb:7
+  Rendered voitures/show.html.erb within layouts/application (Duration: 17.9ms | Allocations: 1522)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 44.1ms | ActiveRecord: 16.8ms | Allocations: 6421)
+
+
+Started GET "/personnes/1" for 127.0.0.1 at 2020-03-02 17:40:17 +0100
+Processing by PersonnesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersonne Load (5.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/personnes_controller.rb:67:in `set_personne'
+  Rendering personnes/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.2ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."personne_id" = ?[0m  [["personne_id", 1]]
+  ↳ app/views/personnes/show.html.erb:20
+  [1m[36mMarque Load (5.2ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.4ms | Allocations: 721)
+  Rendered personnes/show.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1523)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 43.5ms | ActiveRecord: 15.4ms | Allocations: 6411)
+
+
+Started GET "/marques/2" for 127.0.0.1 at 2020-03-02 17:40:18 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.0ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 2]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 798)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 41.7ms | ActiveRecord: 10.4ms | Allocations: 6090)
+
+
+Started GET "/voitures/6" for 127.0.0.1 at 2020-03-02 17:40:18 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mVoiture Load (33.5ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (4.9ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 7.9ms | Allocations: 718)
+  [1m[36mPersonne Load (5.1ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/show.html.erb:7
+  Rendered voitures/show.html.erb within layouts/application (Duration: 16.4ms | Allocations: 1522)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 90ms (Views: 43.5ms | ActiveRecord: 43.5ms | Allocations: 6406)
+
+
+Started GET "/personnes/4" for 127.0.0.1 at 2020-03-02 17:40:19 +0100
+Processing by PersonnesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPersonne Load (34.6ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/personnes_controller.rb:67:in `set_personne'
+  Rendering personnes/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.2ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."personne_id" = ?[0m  [["personne_id", 4]]
+  ↳ app/views/personnes/show.html.erb:20
+  [1m[36mMarque Load (4.9ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 7.5ms | Allocations: 721)
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.3ms | Allocations: 713)
+  Rendered personnes/show.html.erb within layouts/application (Duration: 24.4ms | Allocations: 2333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 99ms (Views: 45.3ms | ActiveRecord: 50.1ms | Allocations: 7211)
+
+
+Started GET "/marques/5" for 127.0.0.1 at 2020-03-02 17:40:21 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMarque Load (7.7ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.3ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 5]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 43.7ms | ActiveRecord: 13.0ms | Allocations: 6313)
+
+
+Started GET "/voitures/81" for 127.0.0.1 at 2020-03-02 17:40:27 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mVoiture Load (6.1ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 81], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (5.7ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 8.7ms | Allocations: 707)
+  Rendered voitures/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 45.8ms | ActiveRecord: 11.9ms | Allocations: 5730)
+
+
+Started GET "/marques/5" for 127.0.0.1 at 2020-03-02 17:40:28 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMarque Load (5.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.8ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 5]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 64ms (Views: 48.8ms | ActiveRecord: 10.9ms | Allocations: 6310)
+
+
+Started GET "/voitures/50" for 127.0.0.1 at 2020-03-02 17:40:31 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mVoiture Load (139.2ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (60.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 65.8ms | Allocations: 707)
+  Rendered voitures/show.html.erb within layouts/application (Duration: 66.9ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 274ms (Views: 67.8ms | ActiveRecord: 199.4ms | Allocations: 5742)
+
+
+Started GET "/marques/5" for 127.0.0.1 at 2020-03-02 17:40:40 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMarque Load (7.5ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.8ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 5]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 58.1ms | ActiveRecord: 13.3ms | Allocations: 6315)
+
+
+Started GET "/voitures/50" for 127.0.0.1 at 2020-03-02 17:40:43 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mVoiture Load (6.1ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/show.html.erb within layouts/application
+  [1m[36mMarque Load (6.3ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/_partialvoiture.html.erb:13
+  Rendered voitures/_partialvoiture.html.erb (Duration: 11.2ms | Allocations: 707)
+  Rendered voitures/show.html.erb within layouts/application (Duration: 12.2ms | Allocations: 850)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 51.1ms | ActiveRecord: 12.4ms | Allocations: 5740)
+
+
+Started GET "/voitures/50/edit" for 127.0.0.1 at 2020-03-02 17:40:46 +0100
+Processing by VoituresController#edit as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mVoiture Load (5.5ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+  Rendering voitures/edit.html.erb within layouts/application
+  [1m[36mMarque Load (7.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" ORDER BY libelle[0m
+  ↳ app/views/voitures/_form.html.erb:35
+  [1m[36mPersonne Load (6.8ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" ORDER BY noms[0m
+  ↳ app/views/voitures/_form.html.erb:40
+  Rendered voitures/_form.html.erb (Duration: 112.4ms | Allocations: 14654)
+  Rendered voitures/edit.html.erb within layouts/application (Duration: 116.3ms | Allocations: 15072)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 180ms (Views: 155.9ms | ActiveRecord: 19.3ms | Allocations: 19990)
+
+
+Started GET "/voitures/immatriculation/AB-123-XY" for 127.0.0.1 at 2020-03-02 17:52:09 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VoituresController#imat as HTML
+  Parameters: {"imat"=>"AB-123-XY"}
+Completed 406 Not Acceptable in 15ms (ActiveRecord: 0.0ms | Allocations: 2013)
+
+
+  
+ActionController::MissingExactTemplate (VoituresController#imat is missing a template for request formats: text/html):
+  
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/abstract_controller/base.rb:196:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/rendering.rb:30:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/callbacks.rb:135:in `run_callbacks'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/abstract_controller/callbacks.rb:41:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/rescue.rb:22:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/notifications.rb:180:in `block in instrument'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/notifications.rb:180:in `instrument'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/bib/lib/gem.fc19/gems/activerecord-6.0.2.1/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/abstract_controller/base.rb:136:in `process'
+/home/bib/lib/gem.fc19/gems/actionview-6.0.2.1/lib/action_view/rendering.rb:39:in `process'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal.rb:191:in `dispatch'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_controller/metal.rb:252:in `dispatch'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/journey/router.rb:32:in `each'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/journey/router.rb:32:in `serve'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/routing/route_set.rb:837:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/tempfile_reaper.rb:17:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/etag.rb:27:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/conditional_get.rb:27:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/head.rb:14:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/session/abstract/id.rb:277:in `context'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/session/abstract/id.rb:271:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+/home/bib/lib/gem.fc19/gems/activerecord-6.0.2.1/lib/active_record/migration.rb:567:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:132:in `call_app'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:28:in `block in call'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:26:in `call'
+/home/bib/lib/gem.fc19/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/method_override.rb:24:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/runtime.rb:24:in `call'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/sendfile.rb:113:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+/home/bib/lib/gem.fc19/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/bib/lib/gem.fc19/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/engine.rb:526:in `call'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/configuration.rb:228:in `call'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:681:in `handle_request'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:472:in `process_client'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:328:in `block in run'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/albums" for 127.0.0.1 at 2020-03-02 18:04:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/albums"):
+  
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:132:in `call_app'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:28:in `block in call'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `catch'
+/home/bib/lib/gem.fc19/gems/web-console-4.0.1/lib/web_console/middleware.rb:17:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:38:in `call_app'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:26:in `block in call'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:28:in `tagged'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/tagged_logging.rb:80:in `tagged'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/rack/logger.rb:26:in `call'
+/home/bib/lib/gem.fc19/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/method_override.rb:24:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/runtime.rb:24:in `call'
+/home/bib/lib/gem.fc19/gems/activesupport-6.0.2.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/static.rb:126:in `call'
+/home/bib/lib/gem.fc19/gems/rack-2.1.1/lib/rack/sendfile.rb:113:in `call'
+/home/bib/lib/gem.fc19/gems/actionpack-6.0.2.1/lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+/home/bib/lib/gem.fc19/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+/home/bib/lib/gem.fc19/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+/home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/engine.rb:526:in `call'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/configuration.rb:228:in `call'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:681:in `handle_request'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:472:in `process_client'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/server.rb:328:in `block in run'
+/home/bib/lib/gem.fc19/gems/puma-4.3.1/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/__web_console/repl_sessions/49494617648eaba3c5e83093d91d734a/trace" for 127.0.0.1 at 2020-03-02 18:04:25 +0100
+Started GET "/" for 127.0.0.1 at 2020-03-02 18:22:27 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bib/lib/gem.fc19/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.6ms | Allocations: 195)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 942)
+
+
+Started GET "/voitures" for 127.0.0.1 at 2020-03-02 18:22:32 +0100
+Processing by VoituresController#index as HTML
+  Rendering voitures/index.html.erb within layouts/application
+  [1m[36mVoiture Load (9.6ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures"[0m
+  ↳ app/views/voitures/index.html.erb:19
+  [1m[36mMarque Load (6.3ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.8ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.2ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (5.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (5.6ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mPersonne Load (6.2ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (6.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Personne Load (0.0ms)[0m  [1m[34mSELECT "personnes".* FROM "personnes" WHERE "personnes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:26
+  [1m[36mMarque Load (5.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.8ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.8ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.6ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (6.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.7ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mMarque Load (5.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.1ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/voitures/index.html.erb:23
+  Rendered voitures/index.html.erb within layouts/application (Duration: 530.2ms | Allocations: 86963)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 591ms (Views: 464.9ms | ActiveRecord: 125.4ms | Allocations: 91423)
+
+
+Started GET "/voitures/AB-123-XY" for 127.0.0.1 at 2020-03-02 18:22:38 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"AB-123-XY"}
+  [1m[36mVoiture Load (6.4ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+Completed 404 Not Found in 10ms (ActiveRecord: 6.4ms | Allocations: 1079)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voiture with 'id'=AB-123-XY):
+  
+app/controllers/voitures_controller.rb:70:in `set_voiture'
+Started GET "/marques/3" for 127.0.0.1 at 2020-03-02 18:22:57 +0100
+Processing by MarquesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMarque Load (5.4ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:68:in `set_marque'
+  [1m[36mCACHE Marque Load (0.0ms)[0m  [1m[34mSELECT "marques".* FROM "marques" WHERE "marques"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/marques_controller.rb:13:in `show'
+  Rendering marques/show.html.erb within layouts/application
+  [1m[36mVoiture Load (5.6ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."marque_id" = ?[0m  [["marque_id", 3]]
+  ↳ app/views/marques/show.html.erb:11
+  Rendered marques/show.html.erb within layouts/application (Duration: 8.8ms | Allocations: 783)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 45.6ms | ActiveRecord: 11.0ms | Allocations: 6079)
+
+
+Started GET "/voitures/CA-111-AA" for 127.0.0.1 at 2020-03-02 18:23:02 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"CA-111-AA"}
+  [1m[36mVoiture Load (5.1ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+Completed 404 Not Found in 8ms (ActiveRecord: 5.1ms | Allocations: 1050)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voiture with 'id'=CA-111-AA):
+  
+app/controllers/voitures_controller.rb:70:in `set_voiture'
+Started GET "/voitures/CA-111-AA" for 127.0.0.1 at 2020-03-02 18:25:27 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"CA-111-AA"}
+  [1m[36mVoiture Load (5.9ms)[0m  [1m[34mSELECT "voitures".* FROM "voitures" WHERE "voitures"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/voitures_controller.rb:70:in `set_voiture'
+Completed 404 Not Found in 43ms (ActiveRecord: 34.8ms | Allocations: 2897)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voiture with 'id'=CA-111-AA):
+  
+app/controllers/voitures_controller.rb:70:in `set_voiture'
+Started GET "/voitures/CA-111-AA" for 127.0.0.1 at 2020-03-02 18:26:52 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"CA-111-AA"}
+Completed 404 Not Found in 38ms (ActiveRecord: 30.2ms | Allocations: 2325)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voiture without an ID):
+  
+app/controllers/voitures_controller.rb:70:in `set_voiture'
+Started GET "/voitures/CA-111-AA" for 127.0.0.1 at 2020-03-02 18:26:54 +0100
+Processing by VoituresController#show as HTML
+  Parameters: {"id"=>"CA-111-AA"}
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms | Allocations: 646)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Voiture without an ID):
+  
+app/controllers/voitures_controller.rb:70:in `set_voiture'
